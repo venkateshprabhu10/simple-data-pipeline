@@ -1,14 +1,14 @@
 import sys
-from config import DB_DETAILS
-from utils import get_tables
+from utils import get_tables, get_credentials
+from read import read_table
 
 def main():
-    """Inputs one argument that specifies the type of instance"""
     env = sys.argv[1]
-    if env in DB_DETAILS.keys():
-        tables = get_tables("tables_to_be_loaded.txt")
-        for table in tables:
-            print(table)
+    db_details = get_credentials(env)
+    tables = get_tables("tables_to_be_loaded.txt")
+    for table in tables:
+        data, cols = read_table(db_details, table, 1)
+        print(data)
 
 if __name__ == "__main__":
     main()

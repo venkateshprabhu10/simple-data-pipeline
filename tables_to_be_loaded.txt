@@ -1,7 +1,7 @@
 table:to_be_loaded
 categories:no
-customers:yes
-departments:no
+customers:no
+departments:yes
 order_items:no
 orders:no
 products:no

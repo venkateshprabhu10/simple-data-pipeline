@@ -1,16 +1,18 @@
 DB_DETAILS = {
     "dev": {
         "source": {
-            "user": "retail_user",
-            "password": "pass",
-            "host": "localhost",
-            "database": "retail_db"
+            "db_type": "mysql",
+            "db_user": "retail_user",
+            "db_password": "pass",
+            "db_host": "localhost",
+            "db_name": "retail_db"
         },
         "target": {
-            "user": "retail_user",
-            "password": "pass",
-            "host": "localhost",
-            "database": "retail_dw"
+            "db_type": "postgres",
+            "db_user": "retail_user",
+            "db_password": "pass",
+            "db_host": "localhost",
+            "db_name": "retail_dw"
         }
     }
 }
