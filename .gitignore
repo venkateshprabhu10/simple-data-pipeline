@@ -2,3 +2,4 @@ __pycache__
 data-pipeline-env
 mysql_validation.py
 postgres_validation.py
+.vscode
