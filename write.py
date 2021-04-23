@@ -6,7 +6,7 @@ def build_insert_query(table_name, cols):
     query = f"INSERT INTO {table_name} ({', '.join(cols)}) VALUES ({values})"
     return query
 
-def write_table(db_details, table_name, values, cols, batch_size=100, logs=True):
+def write_table(db_details, table_name, values, cols, batch_size=1000, logs=True):
     recs = []
     count = 1
     connection = get_connection(db_details["target"])
